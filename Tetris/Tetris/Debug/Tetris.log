@@ -1,3 +1,6 @@
-﻿  Shader.cpp
-  Tetris.vcxproj -> D:\Tetris\Debug\Tetris.exe
-  Tetris.vcxproj -> D:\Tetris\Debug\Tetris.pdb (Full PDB)
+﻿  Tetris.cpp
+d:\github\tetris\tetris\tetris\tetris.cpp(118): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+  GamePlay.cpp
+  Generating Code...
+  Tetris.vcxproj -> D:\GitHub\Tetris\Tetris\Debug\Tetris.exe
+  Tetris.vcxproj -> D:\GitHub\Tetris\Tetris\Debug\Tetris.pdb (Full PDB)
