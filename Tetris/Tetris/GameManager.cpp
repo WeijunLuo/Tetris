@@ -22,6 +22,7 @@ void GameManager::init()
 {
 	//init shader
 	ShaderManager::Instance()->loadShader("sprite","sprite");
+	ShaderManager::Instance()->loadShader("view", "view");
 }
 
 void GameManager::update(GLfloat deltime)

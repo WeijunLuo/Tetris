@@ -8,7 +8,7 @@ GamePlay* GamePlay::Instance()
 	return m_instance;
 }
 
-GamePlay::GamePlay():moveSprite(nullptr),staticSprite(),GameBound()
+GamePlay::GamePlay():moveSprite(nullptr),staticSprite(),GameBound(),gv()
 {
 	GameBound.min = glm::vec2(-0.5f,-1.0f);
 	GameBound.max = glm::vec2(0.5f,1.0f);
@@ -21,8 +21,9 @@ GamePlay::~GamePlay()
 }
 void GamePlay::update(GLfloat deltime)
 {
+
 	if (moveSprite == nullptr)
-		moveSprite = new Sprite(glm::vec2(0, 0.8f), glm::vec2(0, 0), glm::vec2(0.1f, 0.1f), glm::vec2(0, -0.4f));
+		moveSprite = new Sprite(glm::vec2(0, -0.79f), glm::vec2(0, 0), glm::vec2(0.1f, 0.1f), glm::vec2(0, -0.4f));
 	if (moveSprite != nullptr)
 	{
 		moveSpriteControll();
@@ -36,6 +37,7 @@ void GamePlay::update(GLfloat deltime)
 	{
 		(*ite)->render(*ShaderManager::Instance()->GetShader("sprite"));
 	}
+	gv.Rend();
 }
 void GamePlay::moveSpriteControll()
 {
