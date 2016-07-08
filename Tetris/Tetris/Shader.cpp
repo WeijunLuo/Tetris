@@ -23,12 +23,20 @@ void Shader::load_shaderCode()
 	GLuint fragment_shader = glCreateShader(GL_FRAGMENT_SHADER);
 
 	compile_shader(vert,&vertext_shader);
+	std::cout << vert_file << std::endl;
+
 	compile_shader(frag,&fragment_shader);
+	std::cout << frag_file << std::endl;
 
 	this->shader = glCreateProgram();
 	glAttachShader(shader,vertext_shader);
 	glAttachShader(shader,fragment_shader);
+
+
 	glLinkProgram(shader);
+
+	glDeleteShader(vertext_shader);
+	glDeleteShader(fragment_shader);
 
 
 
@@ -47,6 +55,7 @@ void Shader::compile_shader(const char* code,GLuint* shader)
 		std::cout << "ERROR::COMPILATION_FAILED\n" << infoLog << std::endl;
 		std::cout << code << endl;
 	}
+
 }
 void Shader::use()
 {
