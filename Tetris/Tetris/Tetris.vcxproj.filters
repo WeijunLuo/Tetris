@@ -60,6 +60,24 @@
     <ClInclude Include="Render.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Material.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprite.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Tetris.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="StarGame.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayGame.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GameOver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -93,6 +111,21 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="GameData.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Material.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprite.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="StarGame.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayGame.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GameOver.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

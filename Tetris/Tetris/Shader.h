@@ -1,6 +1,8 @@
 #pragma once
 #include <string>
 #include <GL\glew.h>
+#include <glm\glm.hpp>
+#include <glm\gtc\type_ptr.hpp>
 class Shader
 {
 public:
@@ -10,11 +12,14 @@ public:
 	Shader(std::string file_name);
 	~Shader();
 	void use();
-
+	inline void SetShaderMat4(const char* key, glm::mat4 &data)
+	{
+		glUniformMatrix4fv(glGetUniformLocation(shader, key),1,GL_FALSE,glm::value_ptr(data));
+	}
 private:
 	std::string shader_name;
 	void load_shaderCode();
-	void compile_shader(const char* code,GLuint* shader);
+	void compile_shader(std::string code,GLuint* shader);
 
 };
 

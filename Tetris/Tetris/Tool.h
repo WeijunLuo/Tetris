@@ -7,7 +7,7 @@ using namespace std;
 class Tool
 {
 public:
-	inline static  const char* ReadFile(const char* file)
+	inline static  string ReadFile(const char* file)
 	{
 		string data;
 		try
@@ -19,7 +19,7 @@ public:
 			is.close();
 
 			data = dd.str();
-			return data.c_str();
+			return data;
 
 		}
 		catch (exception e)
@@ -28,5 +28,9 @@ public:
 			cout<<e.what() << endl;
 		}
 		return NULL;
+	}
+	inline static unsigned char* ReadTexture(const char* file)
+	{
+
 	}
 };

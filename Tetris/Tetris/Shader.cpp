@@ -16,8 +16,8 @@ void Shader::load_shaderCode()
 {
 	string vert_file = ShaderDirect + this->shader_name + ".vert";
 	string frag_file = ShaderDirect + this->shader_name + ".frag";
-	const char* vert = Tool::ReadFile(vert_file.c_str());
-	const char* frag = Tool::ReadFile(frag_file.c_str());
+	string vert = Tool::ReadFile(vert_file.c_str());
+	string frag = Tool::ReadFile(frag_file.c_str());
 
 	GLuint vertext_shader = glCreateShader(GL_VERTEX_SHADER);
 	GLuint fragment_shader = glCreateShader(GL_FRAGMENT_SHADER);
@@ -41,9 +41,10 @@ void Shader::load_shaderCode()
 
 
 }
-void Shader::compile_shader(const char* code,GLuint* shader)
+void Shader::compile_shader(string code,GLuint* shader)
 {
-	glShaderSource(*shader, 1, &code, NULL);
+	const char* temp = code.c_str();
+	glShaderSource(*shader, 1, &temp, NULL);
 	glCompileShader(*shader);
 
 	GLint success;
@@ -61,3 +62,5 @@ void Shader::use()
 {
 	glUseProgram(this->shader);
 }
+
+
