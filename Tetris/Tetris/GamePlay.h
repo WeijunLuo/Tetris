@@ -12,6 +12,7 @@ public:
 	void update(GLfloat deltime);
 	static GamePlay* Instance();
 private:
+	Bound GameBound;
 	std::list<Sprite*> staticSprite;
 	static GamePlay* m_instance;
 	Sprite* moveSprite;

@@ -18,7 +18,7 @@ void Sprite::render(Shader shader)
 {
 	glm::mat4 mode;
 	mode = glm::translate(mode, glm::vec3(position.x, position.y, 0));
-	mode = glm::scale(mode, glm::vec3(0.5f, 0.5f, 0.5f));
+	mode = glm::scale(mode, glm::vec3(scale.x, scale.y, 1.0f));
 	shader.SetShaderMat4("mode",mode);
 	sr->render(shader);
 }
