@@ -41,8 +41,8 @@ void GameView::Rend()
 	
 	ShaderManager::Instance()->GetShader("view")->use();
 	glBindVertexArray(VAO);
-	glDrawArrays(GL_LINE_LOOP,0,4);
-	//lBindVertexArray(0);
+	glDrawArrays(GL_LINE_STRIP,0,4);
+	glBindVertexArray(0);
 	/*GLfloat v1[] = {-0.5f,0.8f};
 	GLfloat v2[] = { -0.5f,-0.8f };
 	GLfloat v3[] = { 0.5f,-0.8f };

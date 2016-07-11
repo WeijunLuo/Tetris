@@ -9,10 +9,13 @@ class GamePlay
 {
 public:
 
+	int data[20][10];
 	~GamePlay();
 	void update(GLfloat deltime);
 	static GamePlay* Instance();
 private:
+	GLfloat timeControll;
+	int moveData[8];
 	GameView gv;
 	Bound GameBound;
 	std::list<Sprite*> staticSprite;
@@ -21,5 +24,6 @@ private:
 	GamePlay();
 	void moveSpriteControll();
 	void checkMoveSprite();
+	void clear();
 };
 

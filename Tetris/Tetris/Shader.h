@@ -14,10 +14,12 @@ public:
 	void use();
 	inline void SetShaderMat4(const char* key, glm::mat4 &data)
 	{
+		glUseProgram(shader);
 		glUniformMatrix4fv(glGetUniformLocation(shader, key),1,GL_FALSE,glm::value_ptr(data));
 	}
 	inline void SetShaderVec4(const char* key, glm::vec4 &data)
 	{
+		glUseProgram(shader);
 		//glUniform4fv(glGetUniformLocation(shader, key),)
 		glUniform4f(glGetUniformLocation(shader, key), data.x, data.y, data.z, data.w);
 	}

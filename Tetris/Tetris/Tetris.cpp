@@ -44,6 +44,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 
 	glViewport(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+	//glEnable(GL_DEPTH_TEST);
 	glEnable(GL_CULL_FACE);
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
@@ -67,7 +68,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		
 		//sp->update(deltaTime);
 
-		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 
 		GameManager::Instance()->update(deltaTime);

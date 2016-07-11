@@ -1,11 +1,14 @@
 #include "Sprite.h"
+#include "GamePlay.h"
 
 SpriteRender* Sprite::sr;
-Sprite::Sprite(glm::vec2 pos, glm::vec2 rot, glm::vec2 scale, glm::vec2 velocity)
+Sprite::Sprite( glm::vec2 pos, glm::vec2 rot, glm::vec2 scale, glm::vec2 velocity)
 	:GameObject(pos, rot, scale, velocity), color(glm::vec4(rand() % 10 * 0.1f, rand() % 10 * 0.1f, rand() % 10 * 0.1f, 1))
+	,timeControl(0)
 {
 	if (sr == nullptr)
 		sr = new SpriteRender();
+
 }
 
 
@@ -26,6 +29,26 @@ void Sprite::render(Shader shader)
 }
 void Sprite::update(GLfloat delt)
 {
+	/*if (timeControl == 0)
+	{
+		std::list<glm::vec2>::iterator ite;
+		for (ite = posInfo->begin(); ite != posInfo->end(); ++ite)
+		{
+			GamePlay::Instance()->data[(int)(*ite).x][(int)(*ite).y] = 1;
+		}
+	}
+	else if (timeControl > 1)
+	{
+		std::list<glm::vec2>::iterator ite;
+		for (ite = posInfo->begin(); ite != posInfo->end(); ++ite)
+		{
+			GamePlay::Instance()->data[(int)(*ite).x][(int)(*ite).y] = 0;
+			GamePlay::Instance()->data[(int)(*ite).x][(int)(*ite).y +1] = 0;
+			(*ite) = glm::vec2((*ite).x,(*ite).y+1);
+		}
+	}
+	else
+		timeControl += delt;*/
 	position += velocity * delt;
 }
 

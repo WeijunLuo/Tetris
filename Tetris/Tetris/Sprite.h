@@ -4,6 +4,7 @@
 #include "SpriteRender.h"
 #include <glm\gtc\matrix_transform.hpp>
 #include <glm\gtc\type_ptr.hpp>
+#include <list>
 class Sprite : public GameObject
 {
 
@@ -13,7 +14,9 @@ public:
 	~Sprite();
 	virtual void render(Shader shader);
 	virtual void update(GLfloat delt);
+
 private:
+	GLfloat timeControl = 0;
 	static SpriteRender* sr;
 };
 
