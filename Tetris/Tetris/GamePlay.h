@@ -8,6 +8,7 @@
 #include "IModeSpite.h"
 #include "I_Sprite.h"
 #include "O_Spite.h"
+#include "T_Sprite.h"
 class GamePlay
 {
 public:
