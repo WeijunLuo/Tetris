@@ -81,6 +81,24 @@
     <ClInclude Include="GameView.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Z_Sprite.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="I_Sprite.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="F_Sprite.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="T_Sprite.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="O_Spite.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="IModeSpite.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -132,6 +150,24 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="GameView.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Z_Sprite.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="I_Sprite.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="F_Sprite.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="T_Sprite.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="O_Spite.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="IModeSpite.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

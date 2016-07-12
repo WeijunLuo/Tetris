@@ -17,11 +17,11 @@ public:
 		glUseProgram(shader);
 		glUniformMatrix4fv(glGetUniformLocation(shader, key),1,GL_FALSE,glm::value_ptr(data));
 	}
-	inline void SetShaderVec4(const char* key, glm::vec4 &data)
+	inline void SetShaderVec3(const char* key, glm::vec3 &data)
 	{
 		glUseProgram(shader);
 		//glUniform4fv(glGetUniformLocation(shader, key),)
-		glUniform4f(glGetUniformLocation(shader, key), data.x, data.y, data.z, data.w);
+		glUniform3f(glGetUniformLocation(shader, key), data.x, data.y, data.z);
 	}
 private:
 	std::string shader_name;

@@ -82,13 +82,17 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="F_Sprite.h" />
     <ClInclude Include="GameData.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="GameOver.h" />
     <ClInclude Include="GamePlay.h" />
     <ClInclude Include="GameView.h" />
+    <ClInclude Include="IModeSpite.h" />
+    <ClInclude Include="I_Sprite.h" />
     <ClInclude Include="Material.h" />
+    <ClInclude Include="O_Spite.h" />
     <ClInclude Include="PlayGame.h" />
     <ClInclude Include="Render.h" />
     <ClInclude Include="ResourceManager.h" />
@@ -101,16 +105,22 @@
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Tetris.h" />
     <ClInclude Include="Tool.h" />
+    <ClInclude Include="T_Sprite.h" />
     <ClInclude Include="UIMenuManager.h" />
+    <ClInclude Include="Z_Sprite.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="F_Sprite.cpp" />
     <ClCompile Include="GameData.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GameOver.cpp" />
     <ClCompile Include="GamePlay.cpp" />
     <ClCompile Include="GameView.cpp" />
+    <ClCompile Include="IModeSpite.cpp" />
+    <ClCompile Include="I_Sprite.cpp" />
     <ClCompile Include="Material.cpp" />
+    <ClCompile Include="O_Spite.cpp" />
     <ClCompile Include="PlayGame.cpp" />
     <ClCompile Include="ResourceManager.cpp" />
     <ClCompile Include="Shader.cpp" />
@@ -120,7 +130,9 @@
     <ClCompile Include="StarGame.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="Tetris.cpp" />
+    <ClCompile Include="T_Sprite.cpp" />
     <ClCompile Include="UIMenuManager.cpp" />
+    <ClCompile Include="Z_Sprite.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
