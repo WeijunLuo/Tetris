@@ -12,6 +12,7 @@ public:
 	virtual void moveRight();
 	virtual void saveData();
 	virtual void rend();
+	virtual void setPointData(int index_x, int x_value, int index_y, int y_value);
 	int moveData[8];
 	Sprite* moveSprite[4];
 };

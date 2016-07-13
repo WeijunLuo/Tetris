@@ -72,6 +72,10 @@ bool O_Spite::moveDown()
 	return false;
 
 }
+void O_Spite::setPointData(int index_x, int x_value, int index_y, int y_value)
+{
+
+}
 void O_Spite::turnRight()
 {
 

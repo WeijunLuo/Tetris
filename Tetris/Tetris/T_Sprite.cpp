@@ -6,6 +6,7 @@ T_Sprite::T_Sprite()
 {
 
 	glm::vec3 color = glm::vec3(0, 0, 1);
+	rotation = 0;
 
 	moveData[0] = 0;
 	moveData[1] = 4;
@@ -77,9 +78,25 @@ bool T_Sprite::moveDown()
 	return false;
 
 }
+
 void T_Sprite::turnRight()
 {
+		glm::vec2 origin = glm::vec2(moveData[2],moveData[3]);
 
+		if (checkPoint(&(moveData[0]), &(moveData[1]), glm::vec2(moveData[0], moveData[1]), origin, 270))
+		return;
+		if (checkPoint(&(moveData[4]), &(moveData[5]), glm::vec2(moveData[4], moveData[5]), origin, 270))
+		return;
+		if (checkPoint(&(moveData[6]), &(moveData[7]), glm::vec2(moveData[6], moveData[7]), origin, 270))
+		return;
+		int m = 0;
+		for (int i = 0; i < sizeof(moveSprite) / sizeof(moveSprite[0]); i++)
+		{
+			moveSprite[i]->position = getPosition(moveData[m], moveData[m + 1]);
+			m += 2;
+		}
+	
+		
 }
 void T_Sprite::moveLeft()
 {

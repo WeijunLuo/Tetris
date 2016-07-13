@@ -41,7 +41,7 @@ void GamePlay::update(GLfloat deltime)
 	if (IsMoveNow)
 	{
 		IsMoveNow = false;
-		int type = rand() % 3;	
+		int type = rand() % 4;	
 		switch (type)
 		{
 		case 0:
@@ -54,14 +54,15 @@ void GamePlay::update(GLfloat deltime)
 			moveSprite = new O_Spite();
 			break;
 		}
-		case Mode::T:
+		case 2:
 		{
 			moveSprite = new T_Sprite();
 			break;
 		}
-		case Mode::Z:
+		case 3:
 		{
-
+			moveSprite = new Z_Sprite();
+			break;
 		}
 		default:
 			break;
@@ -113,7 +114,11 @@ void GamePlay::moveSpriteControll()
 	{
 		checkMoveSprite();
 	}
-	
+	if (GameManager::KeyCode[GLFW_KEY_W])
+	{
+		GameManager::KeyCode[GLFW_KEY_W] = false;
+		moveSprite->turnRight();
+	}
 
 }
 void GamePlay::checkMoveSprite()

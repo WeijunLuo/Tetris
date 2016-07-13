@@ -13,9 +13,10 @@ public:
 	virtual void moveRight();
 	virtual void saveData();
 	virtual void rend();
-	int moveData[8];
-	Sprite* moveSprite[4];
+	int moveData[10];
+	Sprite* moveSprite[5];
 private:
+	
 
 };
 
