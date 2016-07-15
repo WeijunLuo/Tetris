@@ -41,7 +41,7 @@ void GamePlay::update(GLfloat deltime)
 	if (IsMoveNow)
 	{
 		IsMoveNow = false;
-		int type = rand() % 4;	
+		int type = rand() % 5;	
 		switch (type)
 		{
 		case 0:
@@ -62,6 +62,11 @@ void GamePlay::update(GLfloat deltime)
 		case 3:
 		{
 			moveSprite = new Z_Sprite();
+			break;
+		}
+		case 4:
+		{
+			moveSprite = new F_Sprite();
 			break;
 		}
 		default:

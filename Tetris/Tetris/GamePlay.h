@@ -10,6 +10,7 @@
 #include "O_Spite.h"
 #include "T_Sprite.h"
 #include "Z_Sprite.h"
+#include "F_Sprite.h"
 class GamePlay
 {
 public:
