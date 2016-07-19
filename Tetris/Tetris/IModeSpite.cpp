@@ -13,7 +13,6 @@ IModeSpite::~IModeSpite()
 glm::vec2 IModeSpite::getPosition(int x, int y)
 {
 
-	
 
 }
 glm::vec2 IModeSpite::getRotatePoint(glm::vec2 point, glm::vec2 origin, float angle)
