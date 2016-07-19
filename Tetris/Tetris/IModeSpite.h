@@ -1,18 +1,24 @@
 #pragma once
 #include <glm\glm.hpp>
 #include <cmath>
+#include "Sprite.h"
 class IModeSpite
 {
 public:
-	int rotation = 0;
+	int m_length;
+	int s_length;
+
+	int *moveData;
+	Sprite **moveSprite;
+
 	IModeSpite();
 	~IModeSpite();
-	virtual void rend() = 0;
-	virtual void turnRight() = 0;
-	virtual bool moveDown() = 0;
-	virtual void moveLeft() = 0;
-	virtual void moveRight() = 0;
-	virtual void saveData() = 0;
+	 virtual void turnRight() = 0;
+	void rend();
+	bool moveDown();
+	void moveLeft();
+	void moveRight();
+	void saveData();
 	glm::vec2 getPosition(int x, int y);
 	glm::vec2 getRotatePoint(glm::vec2 point, glm::vec2 origin,float angle);
 	bool checkPoint(int *x,int *y,glm::vec2 point, glm::vec2 origin, float angle);
